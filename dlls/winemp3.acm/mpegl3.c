@@ -204,7 +204,7 @@ static void mp3_horse(PACMDRVSTREAMINSTANCE adsi,
  */
 static void MPEG3_Reset(PACMDRVSTREAMINSTANCE adsi, AcmMpeg3Data* aad)
 {
-    mpg123_feedseek(aad->mh, 0, SEEK_SET, NULL);
+    mpg123_feedseek_64(aad->mh, 0, SEEK_SET, NULL);
     mpg123_close(aad->mh);
     mpg123_open_feed(aad->mh);
 }
